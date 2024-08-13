@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigup</title>
+    <style>
+        header {
+            background-color: black;
+        }
+        h2 {
+            color: white;
+            text-shadow: 1px 1px 1px blueviolet;;
+            text-align: center;
+        }
+        .sigup {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<header>
+    <h2>
+        Sign Up
+    </h2>
+    <ul>
+        <li><a href="{% url "home" %}">Home</a></li>
+    </ul>
+</header>
+<body>
+    <br>
+    <div class="signup">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">SignUp</button>
+          </form>
+    </div>
+      
+    
+</body>
+</html>
